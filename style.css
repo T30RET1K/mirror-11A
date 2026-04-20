@@ -1,0 +1,19 @@
+/* Оформлення робочого місця */
+body {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+canvas {
+  background: white;
+  border: 5px solid #bdc3c7;
+  cursor: crosshair;
+}
+
+.controls {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
