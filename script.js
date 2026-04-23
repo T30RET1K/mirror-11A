@@ -1,19 +1,24 @@
-const colorPicker = document.getElementById("colorPicker");
-const lineWidth = document.getElementById("lineWidth");
-
 const canvas = document.querySelector("#board");
 const ctx = canvas.getContext("2d");
 let isDrawing = false;
+const colorPicker = document.getElementById("colorPicker");
+const lineWidth = document.getElementById("lineWidth");
+const sizeValue = document.getElementById("sizeValue");
 
 // Технічні параметри пензля
-ctx.lineWidth = 10;
+ctx.lineWidth = 5;
 ctx.lineCap = "round";
-ctx.strokeStyle = "#f8d1f8";
+ctx.strokeStyle = "#e74c3c"; // Червоний колір за замовчуванням
+
 // Логіка малювання
 canvas.onmousedown = (e) => {
   isDrawing = true;
   ctx.beginPath();
   ctx.moveTo(e.offsetX, e.offsetY);
+
+  // МІСЦЕ ДОДАВАННЯ:
+  ctx.strokeStyle = colorPicker.value;
+  ctx.lineWidth = lineWidth.value;
 };
 canvas.onmouseup = () => (isDrawing = false);
 canvas.onmousemove = (e) => {
@@ -21,4 +26,7 @@ canvas.onmousemove = (e) => {
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
   }
+};
+lineWidth.oninput = () => {
+  sizeValue.textContent = lineWidth.value + "px";
 };

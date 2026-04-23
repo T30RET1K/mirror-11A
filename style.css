@@ -10,10 +10,18 @@ canvas {
   border: 5px solid #bdc3c7;
   cursor: crosshair;
 }
-
 .controls {
   margin-bottom: 10px;
   display: flex;
   gap: 15px;
   justify-content: center;
+}
+
+.controls {
+  background: #34495e;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
