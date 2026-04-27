@@ -42,3 +42,9 @@ clearBtn.onclick = () => {
   // Додаткова перестраховка: скидаємо шлях, щоб наступна лінія не почалася зі старого місця
   ctx.beginPath();
 };
+// --- Крок 13: Додаємо рамку та підпис ---
+colorPicker.oninput = () => {
+  // автор: ім'я / нік
+  ctx.strokeStyle = colorPicker.value;
+  colorPicker.style.borderColor = colorPicker.value;
+};
