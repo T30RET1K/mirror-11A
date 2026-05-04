@@ -16,6 +16,7 @@ canvas {
   gap: 15px;
   justify-content: center;
 }
+/*TEORET1K*/
 
 .controls {
   background: #34495e;
@@ -39,7 +40,6 @@ button:hover {
   background-color: #e0e0e0;
 }
 /* Загальний стиль для всіх кнопок панелі — автор: ім'я /нік */
-/* Додаємо select до існуючого правила */
 .tool-button,
 select.tool-button {
   width: 40px;
@@ -52,7 +52,12 @@ select.tool-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px; /* щоб іконки 🖌️ та 📏 було добре видно */
+
+  /*azzov99*/
+  /* Оновлені параметри для унікоду */
+  font-size: 22px; /* Збільшили, щоб символи було добре видно */
+  font-weight: bold; /* Щоб лінії символів були чіткішими */
+  line-height: 1; /* Центрування символу по вертикалі */
 }
 
 /* Специфічні налаштування для вибору кольору, автор: ім'я учасника */
